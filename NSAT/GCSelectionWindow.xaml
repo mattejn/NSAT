@@ -1,0 +1,33 @@
+﻿<Window x:Class="NSAT.GCSelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NSAT"
+        mc:Ignorable="d"
+        Title="GCSelectionWindow" Height="600" Width="600">
+    <Grid>
+        <ListBox x:Name="lbSelectionGC" HorizontalAlignment="Left" Height="477" VerticalAlignment="Top" Width="574" Margin="10,10,0,0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.RowDefinitions>
+
+
+                            <RowDefinition Height="20" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding Title}" >
+                        <CheckBox x:Name="chbGC" IsChecked="{Binding GC}"></CheckBox>
+                        </TextBlock>
+
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+        <Button x:Name="btnComputeGC" Content="Compute" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="200,492,0,0" Click="btnComputeGC_Click" />
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="300,492,0,0" Click="btnCancel_Click"/>
+        <Label x:Name="lblStatusGC" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,517,0,0" Width="574" Height="43"/>
+
+    </Grid>
+</Window>
